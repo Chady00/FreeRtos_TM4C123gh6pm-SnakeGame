@@ -4,7 +4,8 @@
 ### Overview
 The code is a basic implementation of the Snake game in FreeRTOS, a real-time operating system. It utilizes FreeRTOS API to create tasks for printing and shifting the snake, as well as a mutex to handle game reset interruptions. The main tasks in the code are `PrintTask` and `ShiftSnake`. UART is used for communication, and various macro constants are defined for GPIO and UART configurations.
 
-<img src="[drawing.jpg](https://github.com/Chady00/FreeRtos_TM4C123gh6pm-SnakeGame/assets/84717550/0b7fd7cb-75fc-4910-a6fa-776c118f37d8)" alt="drawing" width="100"/>
+
+![1](https://github.com/Chady00/FreeRtos_TM4C123gh6pm-SnakeGame/assets/84717550/9b914bd8-3f88-4645-9104-81a26a23257c | width=100)
 
 
 
