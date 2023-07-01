@@ -3,7 +3,9 @@
 
 ### Overview
 The code is a basic implementation of the Snake game in FreeRTOS, a real-time operating system. It utilizes FreeRTOS API to create tasks for printing and shifting the snake, as well as a mutex to handle game reset interruptions. The main tasks in the code are `PrintTask` and `ShiftSnake`. UART is used for communication, and various macro constants are defined for GPIO and UART configurations.
-![5](https://github.com/Chady00/FreeRtos_TM4C123gh6pm-SnakeGame/assets/84717550/872dad1c-7d6b-4756-9d69-c95b6dbcbbbc)
+
+
+![1](https://github.com/Chady00/FreeRtos_TM4C123gh6pm-SnakeGame/assets/84717550/0b7fd7cb-75fc-4910-a6fa-776c118f37d8)
 
 
 ### Drivers used
@@ -12,7 +14,6 @@ The code is a basic implementation of the Snake game in FreeRTOS, a real-time op
 - Systick Timer is used to trigger `vApplicationTickHook`.
 
 ### Tasks/Functions implemented
-![1](https://github.com/Chady00/FreeRtos_TM4C123gh6pm-SnakeGame/assets/84717550/7122cb05-48db-48b4-af20-303214582511)
 #### PrintTask (Higher Priority=3)
 A task responsible for printing the updated frame of the Snake game to the terminal screen. It performs the following steps:
 - Initializes the game frame by assigning each element of a 2-D array named "frame" with a space character.
@@ -23,6 +24,10 @@ A task responsible for printing the updated frame of the Snake game to the termi
 - Releases the semaphore (xMutex) after printing the information.
 - Delays the task execution for a specific amount of time determined by the game speed.
 
+![2](https://github.com/Chady00/FreeRtos_TM4C123gh6pm-SnakeGame/assets/84717550/e068ac90-04ce-434b-94c9-2227f25df76d)
+![3](https://github.com/Chady00/FreeRtos_TM4C123gh6pm-SnakeGame/assets/84717550/094e084a-707d-4b05-b6d3-300669959cd6)
+
+
 #### ShiftSnake (Lower priority = 2)
 A task that updates the state of the snake in the game. It performs the following steps:
 - Moves the snake in one of the four directions (up, down, left, or right) based on the current direction of movement.
@@ -30,7 +35,9 @@ A task that updates the state of the snake in the game. It performs the followin
 - If the snake hits a wall or its own tail, it resets the game.
 - If the snake eats food, it increases the length of the snake and generates new food.
 - Delays for a specified amount of time between each iteration to control the game speed.
-![2](https://github.com/Chady00/FreeRtos_TM4C123gh6pm-SnakeGame/assets/84717550/15a6f21c-5a84-46a2-84e1-b7388e3077ba)
+- 
+![6](https://github.com/Chady00/FreeRtos_TM4C123gh6pm-SnakeGame/assets/84717550/ba23d083-92c7-4df6-88a6-ec9f9a0e0403)
+![5](https://github.com/Chady00/FreeRtos_TM4C123gh6pm-SnakeGame/assets/84717550/cdf5ad0d-f228-4321-bd14-b61263d2ab41)
 
 
 #### ResetGame() function
@@ -53,6 +60,7 @@ A function that updates a "special_pow" variable by incrementing it by 1 and tak
 - Generates a new random position for the "power" object by using the "rand()" function and taking the modulus with the frame width and length.
 - Continues the loop until the new position of the "power" object does not coincide with the position of a snake body segment or a wall ("o" or "#").
 
+![7](https://github.com/Chady00/FreeRtos_TM4C123gh6pm-SnakeGame/assets/84717550/71ab2bbd-f8c8-4a0b-a19f-cf3ebe2b9089)
 ### Faced Issues:
 
 1. Concurrency issues: Handling synchronization between tasks using semaphores or mutexes.
@@ -63,5 +71,5 @@ A function that updates a "special_pow" variable by incrementing it by 1 and tak
 6. Scoring system: Keeping track of the player's score and displaying it on the screen.
 7. Gameplay balancing: Adjusting the game speed and difficulty level.   
 
-   ![7](https://github.com/Chady00/FreeRtos_TM4C123gh6pm-SnakeGame/assets/84717550/af372f49-8c70-4f2d-9a49-61153412c208)
+
 
