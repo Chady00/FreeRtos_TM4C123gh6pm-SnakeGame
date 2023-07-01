@@ -1,10 +1,10 @@
-![5](https://github.com/Chady00/FreeRtos_TM4C123gh6pm-SnakeGame/assets/84717550/872dad1c-7d6b-4756-9d69-c95b6dbcbbbc)
 # <span style="color: red;">FreeRtos_TM4C123gh6pm-SnakeGame</span>
 ## How the implementation works
 
 ### Overview
 The code is a basic implementation of the Snake game in FreeRTOS, a real-time operating system. It utilizes FreeRTOS API to create tasks for printing and shifting the snake, as well as a mutex to handle game reset interruptions. The main tasks in the code are `PrintTask` and `ShiftSnake`. UART is used for communication, and various macro constants are defined for GPIO and UART configurations.
-![1](https://github.com/Chady00/FreeRtos_TM4C123gh6pm-SnakeGame/assets/84717550/7122cb05-48db-48b4-af20-303214582511)
+![5](https://github.com/Chady00/FreeRtos_TM4C123gh6pm-SnakeGame/assets/84717550/872dad1c-7d6b-4756-9d69-c95b6dbcbbbc)
+
 
 ### Drivers used
 - UART driver: Uart0 for sending, receiving, and displaying data on the serial terminal.
@@ -12,7 +12,7 @@ The code is a basic implementation of the Snake game in FreeRTOS, a real-time op
 - Systick Timer is used to trigger `vApplicationTickHook`.
 
 ### Tasks/Functions implemented
-
+![1](https://github.com/Chady00/FreeRtos_TM4C123gh6pm-SnakeGame/assets/84717550/7122cb05-48db-48b4-af20-303214582511)
 #### PrintTask (Higher Priority=3)
 A task responsible for printing the updated frame of the Snake game to the terminal screen. It performs the following steps:
 - Initializes the game frame by assigning each element of a 2-D array named "frame" with a space character.
