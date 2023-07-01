@@ -24,8 +24,9 @@ A task responsible for printing the updated frame of the Snake game to the termi
 - Releases the semaphore (xMutex) after printing the information.
 - Delays the task execution for a specific amount of time determined by the game speed.
 
-![2](https://github.com/Chady00/FreeRtos_TM4C123gh6pm-SnakeGame/assets/84717550/e068ac90-04ce-434b-94c9-2227f25df76d)
-![3](https://github.com/Chady00/FreeRtos_TM4C123gh6pm-SnakeGame/assets/84717550/094e084a-707d-4b05-b6d3-300669959cd6)
+![resize-16882442984939547692](https://github.com/Chady00/FreeRtos_TM4C123gh6pm-SnakeGame/assets/84717550/16b3fc17-1750-4643-97c1-48de69d22a9c)
+
+![resize-168824426811832548423](https://github.com/Chady00/FreeRtos_TM4C123gh6pm-SnakeGame/assets/84717550/1490ed1a-f87b-493a-986e-474ace2d9f91)
 
 
 #### ShiftSnake (Lower priority = 2)
@@ -35,9 +36,11 @@ A task that updates the state of the snake in the game. It performs the followin
 - If the snake hits a wall or its own tail, it resets the game.
 - If the snake eats food, it increases the length of the snake and generates new food.
 - Delays for a specified amount of time between each iteration to control the game speed.
-- 
-![6](https://github.com/Chady00/FreeRtos_TM4C123gh6pm-SnakeGame/assets/84717550/ba23d083-92c7-4df6-88a6-ec9f9a0e0403)
-![5](https://github.com/Chady00/FreeRtos_TM4C123gh6pm-SnakeGame/assets/84717550/cdf5ad0d-f228-4321-bd14-b61263d2ab41)
+
+  
+![resize-168824432816880533776](https://github.com/Chady00/FreeRtos_TM4C123gh6pm-SnakeGame/assets/84717550/1c408d7f-b7a7-4f0b-9924-8407565c711e)
+![resize-168824436318880314315](https://github.com/Chady00/FreeRtos_TM4C123gh6pm-SnakeGame/assets/84717550/bf0c3b2f-039b-4daf-86b7-78bccb5caa5a)
+
 
 
 #### ResetGame() function
@@ -60,7 +63,8 @@ A function that updates a "special_pow" variable by incrementing it by 1 and tak
 - Generates a new random position for the "power" object by using the "rand()" function and taking the modulus with the frame width and length.
 - Continues the loop until the new position of the "power" object does not coincide with the position of a snake body segment or a wall ("o" or "#").
 
-![7](https://github.com/Chady00/FreeRtos_TM4C123gh6pm-SnakeGame/assets/84717550/71ab2bbd-f8c8-4a0b-a19f-cf3ebe2b9089)
+![resize-168824438518772532107](https://github.com/Chady00/FreeRtos_TM4C123gh6pm-SnakeGame/assets/84717550/605e824b-60de-41d6-b13f-5418654b7130)
+
 ### Faced Issues:
 
 1. Concurrency issues: Handling synchronization between tasks using semaphores or mutexes.
