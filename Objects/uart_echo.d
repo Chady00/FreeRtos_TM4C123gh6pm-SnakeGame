@@ -1,0 +1,14 @@
+.\objects\uart_echo.o: uart_echo.c
+.\objects\uart_echo.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\uart_echo.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+.\objects\uart_echo.o: inc/hw_ints.h
+.\objects\uart_echo.o: inc/hw_memmap.h
+.\objects\uart_echo.o: driverlib/debug.h
+.\objects\uart_echo.o: driverlib/fpu.h
+.\objects\uart_echo.o: driverlib/gpio.h
+.\objects\uart_echo.o: driverlib/interrupt.h
+.\objects\uart_echo.o: driverlib/pin_map.h
+.\objects\uart_echo.o: driverlib/rom.h
+.\objects\uart_echo.o: driverlib/rom_map.h
+.\objects\uart_echo.o: driverlib/sysctl.h
+.\objects\uart_echo.o: driverlib/uart.h
