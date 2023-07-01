@@ -1,5 +1,4 @@
-<span style="color: blue;"># FreeRtos_TM4C123gh6pm-SnakeGame</span>
-
+# <span style="color: red;">FreeRtos_TM4C123gh6pm-SnakeGame</span>
 ## How the implementation works
 
 ### Overview
