@@ -31,7 +31,7 @@ A task that updates the state of the snake in the game. It performs the followin
 - If the snake eats food, it increases the length of the snake and generates new food.
 - Delays for a specified amount of time between each iteration to control the game speed.
 ![2](https://github.com/Chady00/FreeRtos_TM4C123gh6pm-SnakeGame/assets/84717550/15a6f21c-5a84-46a2-84e1-b7388e3077ba)
-![Uploading 3.png…]()
+
 
 #### ResetGame() function
 A function that resets the game state and prepares it to start over. It performs the following tasks:
@@ -44,8 +44,7 @@ A function that resets the game state and prepares it to start over. It performs
 7. Displays the high score and the latest score on the screen.
 8. Resets the score to 0 and waits for the start of the game.
 9. Resets the time to 0 and clears the screen again.
-![Uploading 4.png…]()
-![Uploading 6.png…]()
+
 
 #### Snake_power_up function
 A function that updates a "special_pow" variable by incrementing it by 1 and taking the modulus with 5. It performs the following steps:
@@ -54,7 +53,7 @@ A function that updates a "special_pow" variable by incrementing it by 1 and tak
 - Generates a new random position for the "power" object by using the "rand()" function and taking the modulus with the frame width and length.
 - Continues the loop until the new position of the "power" object does not coincide with the position of a snake body segment or a wall ("o" or "#").
 
-### Faced Issues![Uploading 4.png…]()
+### Faced Issues:
 
 1. Concurrency issues: Handling synchronization between tasks using semaphores or mutexes.
 2. Designing the game logic: Defining the rules of the game, such as snake movement, collision detection, and increasing snake length when it eats food.
@@ -62,6 +61,7 @@ A function that updates a "special_pow" variable by incrementing it by 1 and tak
 4. Keyboard input: Reading input from a keyboard in an RTOS environment and handling input events.
 5. Debugging issues: Debugging concurrent tasks with non-deterministic execution order.
 6. Scoring system: Keeping track of the player's score and displaying it on the screen.
-7. Gameplay balancing: Adjusting the game speed and difficulty level.
+7. Gameplay balancing: Adjusting the game speed and difficulty level.   
+
    ![7](https://github.com/Chady00/FreeRtos_TM4C123gh6pm-SnakeGame/assets/84717550/af372f49-8c70-4f2d-9a49-61153412c208)
 
